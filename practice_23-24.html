@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическое занятие 23-24: Встраивание JavaScript-скриптов</title>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .toggle-element {
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .hidden {
+            display: none;
+        }
+        .navigation {
+            background-color: #4CAF50;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border-radius: 4px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .navigation a:hover {
+            background-color: #45a049;
+        }
+        .navigation a.active {
+            background-color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="practice_23-24.html" class="active">Занятие 23-24</a>
+        <a href="practice_25-26.html">Занятие 25-26</a>
+    </div>
+    <h1 id="mainTitle">Практическое занятие 23-24</h1>
+    
+    <div class="container">
+        <h2>Управление фоном</h2>
+        <button onclick="changeBackgroundColor('lightblue')">Голубой фон</button>
+        <button onclick="changeBackgroundColor('lightgreen')">Зеленый фон</button>
+        <button onclick="changeBackgroundColor('lightyellow')">Желтый фон</button>
+        <button onclick="resetBackgroundColor()">Сбросить фон</button>
+    </div>
+
+    <div class="container">
+        <h2>Переключение видимости</h2>
+        <button onclick="toggleVisibility('.toggle-element')">Переключить видимость элемента</button>
+        <div class="toggle-element">
+            Этот элемент можно скрыть или показать
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Время</h2>
+        <button onclick="logCurrentTime()">Вывести текущее время</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
